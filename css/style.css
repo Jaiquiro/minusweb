@@ -1,0 +1,56 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+section:nth-child(even) {
+    background-color: #f2dfe2;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+    z-index: 1;
+}
+
+nav a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+nav a:hover,
+section#Nosotros:hover~nav a[href="#Nosotros"],
+section#Servicios:hover~nav a[href="#Servicios"],
+section#Portafolio:hover~nav a[href="#Portafolio"],
+section#Contacto:hover~nav a[href="#Contacto"],
+section#Blog:hover~nav a[href="#Blog"] {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
